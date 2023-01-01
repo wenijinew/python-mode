@@ -13,13 +13,13 @@ endfunction "}}}
 
 fun! g:PymodeSigns.setup() "{{{
     if self.enabled()
-        execute 'sign define PymodeW text=' . g:pymode_lint_todo_symbol     . " texthl=Todo"
-        execute 'sign define PymodeD text=' . g:pymode_lint_docs_symbol     . " texthl=String"
-        execute 'sign define PymodeC text=' . g:pymode_lint_comment_symbol  . " texthl=Comment"
-        execute 'sign define PymodeR text=' . g:pymode_lint_visual_symbol   . " texthl=Visual"
-        execute 'sign define PymodeE text=' . g:pymode_lint_error_symbol    . " texthl=Error"
-        execute 'sign define PymodeI text=' . g:pymode_lint_info_symbol     . " texthl=Info"
-        execute 'sign define PymodeF text=' . g:pymode_lint_pyflakes_symbol . " texthl=Info"
+        execute 'sign define PymodeW text=' . g:pymode_lint_todo_symbol     . " texthl=PymodeW"
+        execute 'sign define PymodeD text=' . g:pymode_lint_docs_symbol     . " texthl=PymodeD"
+        execute 'sign define PymodeC text=' . g:pymode_lint_comment_symbol  . " texthl=PymodeC"
+        execute 'sign define PymodeR text=' . g:pymode_lint_visual_symbol   . " texthl=PymodeR"
+        execute 'sign define PymodeE text=' . g:pymode_lint_error_symbol    . " texthl=PymodeE"
+        execute 'sign define PymodeI text=' . g:pymode_lint_info_symbol     . " texthl=PymodeI"
+        execute 'sign define PymodeF text=' . g:pymode_lint_pyflakes_symbol . " texthl=PymodeF"
     endif
     let self._sign_ids = []
     let self._next_id = 10000
