@@ -50,7 +50,8 @@ fun! g:PymodeSigns.place(loclist) "{{{
         if !has_key(seen, issue.lnum)
             let seen[issue.lnum] = 1
             call add(self._sign_ids, self._next_id)
-            execute printf('sign place %d line=%d name=%s buffer=%d', self._next_id, issue.lnum, "Pymode".issue.type[0], issue.bufnr)
+            let issue_type = toupper(issue.type)
+            execute printf('sign place %d line=%d name=%s buffer=%d', self._next_id, issue.lnum, "Pymode".issue_type[0], issue.bufnr)
             let self._next_id += 1
         endif
     endfor
